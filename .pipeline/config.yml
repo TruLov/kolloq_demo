@@ -23,21 +23,26 @@ general:
 
 ### Step-specific configuration
 steps:
-  mavenExecute:
-    dockerImage: devxci/mbtci:1.0.14
+#  mavenExecute:
+#    dockerImage: devxci/mbtci:1.0.14
 
 ### Stage-specific configuration
 stages:
-  #  integrationTests:
-  #    credentials:
-  #      - alias: 'mySystemAlias'
-  #        credentialId: 'mySystemCredentialsId'
 
-  productionDeployment:
-    cfTargets:
-      - org: "836c2c00trial"
-        space: "dev"
-        apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-        #        appName: 'myAppName'
-        #        manifest: 'manifest.yml'
-        credentialsId: "6b1b9bd1-d9dd-461d-8057-e651521a0ad7"
+#  integrationTests:
+#    credentials:
+#      - alias: 'mySystemAlias'
+#        credentialId: 'mySystemCredentialsId'
+
+#  s4SdkQualityChecks:
+#    nonErpDestinations:
+#      - 'myCustomDestination'
+
+#  productionDeployment:
+#    cfTargets:
+#      - org: "836c2c00trial"
+#        space: "dev"
+#        apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+#        #        appName: 'myAppName'
+#        #        manifest: 'manifest.yml'
+#        credentialsId: "6b1b9bd1-d9dd-461d-8057-e651521a0ad7"
