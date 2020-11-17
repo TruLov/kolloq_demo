@@ -17,31 +17,6 @@
         "start": "npm cds run"
     },
     "cds": {
-        "build": {
-            "target": ".",
-            "tasks": [
-                {
-                    "src": "db",
-                    "for": "hana",
-                    "options": {
-                        "model":[
-                            "db",
-                            "srv"
-                        ]
-                    }
-                },
-                {
-                    "src": "srv",
-                    "for": "node-cf",
-                    "options": {
-                        "model":[
-                            "db",
-                            "srv"
-                        ]
-                    }
-                }
-            ]
-        },
         "hana": {
             "deploy-format": "hdbtable"
         },
