@@ -23,17 +23,19 @@ cloudSdkPipeline(script: this)
 */
 
 @Library('piper-lib-os') _
-node() {
-    stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
-    }
 
-    stage('build') {
-        mtaBuild script: this
-    }
+node(){
+  stage('Prepare')   {
+      deleteDir()
+      checkout scm
+      setupCommonPipelineEnvironment script:this
+  }
 
-    stage('deploy') {
-        cloudFoundryDeploy script: this
-    }
+  stage('Build')   {
+      mtaBuild script:this
+  }
+
+  stage('Deploy')   {
+      cloudFoundryDeploy script:this, deployTool:'mtaDeployPlugin'
+  }
 }
