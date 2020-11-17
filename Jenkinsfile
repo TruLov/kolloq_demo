@@ -17,16 +17,5 @@
  */
 String pipelineVersion = "v42"
 
-//library "s4sdk-pipeline-library@${pipelineVersion}"
-//cloudSdkPipeline(script: this)
-
-@Library('piper-lib-os') _
-node() {
-    stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
-    }
-    stage('build') {
-        mtaBuild script: this
-    }
-}
+library "s4sdk-pipeline-library@${pipelineVersion}"
+cloudSdkPipeline(script: this)
