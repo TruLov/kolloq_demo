@@ -25,6 +25,8 @@ general:
 steps:
 #  mavenExecute:
 #    dockerImage: devxci/mbtci:1.0.14
+  mtaBuild:
+    buildTarget: 'CF'
 
 ### Stage-specific configuration
 stages:
