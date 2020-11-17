@@ -26,13 +26,6 @@ steps:
   mavenExecute:
     dockerImage: devxci/mbtci:1.0.14
 
-  cloudFoundryDeploy:
-    cloudFoundry:
-      apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-      org: "836c2c00trial"
-      space: "dev"
-      credentialsId: "6b1b9bd1-d9dd-461d-8057-e651521a0ad7"
-
 ### Stage-specific configuration
 stages:
   #  integrationTests:
