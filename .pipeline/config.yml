@@ -27,8 +27,12 @@ steps:
 #    dockerImage: devxci/mbtci:1.0.14
   mtaBuild:
     buildTarget: 'CF'
-
-#  cloudFoundryDeploy:
+  cloudFoundryDeploy:
+    cloudFoundry:
+      credentialsId: 'e97d8245-0fd2-4c87-872c-d7df0cb38d39'
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      org: '836c2c00trial'
+      space: 'dev'
 #    deployTool: 'mtaDeployPlugin'
 #    deployType: 'standard'
 #    cloudFoundry:
@@ -48,11 +52,11 @@ stages:
 #    nonErpDestinations:
 #      - 'myCustomDestination'
 
-  productionDeployment:
-    cfTargets:
-      - org: "836c2c00trial"
-        space: "dev"
-        apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-        #        appName: 'myAppName'
-        #        manifest: 'manifest.yml'
-        credentialsId: "6b1b9bd1-d9dd-461d-8057-e651521a0ad7"
+#  productionDeployment:
+#    cfTargets:
+#      - org: "836c2c00trial"
+#        space: "dev"
+#        apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+#        #        appName: 'myAppName'
+#        #        manifest: 'manifest.yml'
+#        credentialsId: "6b1b9bd1-d9dd-461d-8057-e651521a0ad7"
