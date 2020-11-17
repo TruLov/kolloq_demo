@@ -21,6 +21,7 @@
 
 ### General project setup
 general:
+  productiveBranch: main
 
 ### Step-specific configuration
 steps:
@@ -36,11 +37,11 @@ stages:
 #      - alias: 'mySystemAlias'
 #        credentialId: 'mySystemCredentialsId'
 
-#  productionDeployment:
-#    cfTargets:
-#      - org: 'myOrg'
-#        space: 'mySpace'
-#        apiEndpoint: 'https://'
+  productionDeployment:
+    cfTargets:
+      - org: '836c2c00trial'
+        space: 'dev'
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
 #        appName: 'myAppName'
 #        manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+        credentialsId: '6b1b9bd1-d9dd-461d-8057-e651521a0ad7'

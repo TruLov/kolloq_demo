@@ -2,7 +2,7 @@
     "name": "kolloq_demo",
     "version": "1.0.0",
     "description": "A simple CAP project.",
-    "repository": "<Add your repository here>",
+    "repository": "https://github.com/TruLov/kolloq_demo",
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
@@ -17,10 +17,8 @@
         "start": "npx cds run"
     },
     "cds": {
-        "requires": {
-            "db": {
-                "kind": "sql"
-            }
+        "hana": {
+            "deploy-format": "hdbtable"
         }
     }
 }
