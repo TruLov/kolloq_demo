@@ -21,7 +21,7 @@
 
 ### General project setup
 general:
-  productiveBranch: main
+  productiveBranch: master
 
 ### Step-specific configuration
 steps:
